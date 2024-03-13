@@ -8,24 +8,85 @@
 </head>
 <body>
 
-    <nav class="fixed top-0 left-0 w-screen h-24 bg-blue-600/75 z-40">
+<nav class="bg-white border-gray-200 dark:bg-gray-900 fixed z-40 w-full py-5">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Portofolio</span>
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 bg-gray-800 md:bg-gray-900 border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 bg-blue-700 rounded md:bg-transparent md:p-0 text-white md:text-blue-500" aria-current="page">Overview</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Education</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Organization</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Experience</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-white md:hover:bg-transparent">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    </nav>
-
+  
     <section class="h-screen bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')]">
         <div class="bg-gradient-to-b to-transparent via-blue-900/25 from-blue-900/75 w-full h-full absolute top-0 left-0 z-0 sm:px-20 px-2.5">
 
 
             <div class="flex sm:flex-row flex-col w-full h-full sm:space-x-20 space-x-0 sm:justify-center justify-end">
                 <div class="w-full sm:h-full h-1/2 max-w-xl px-5 relative sm:order-first order-last sm:ml-0 -ml-5">
-                    <div class=" sm:w-96 sm:h-96 w-64 h-64 absolute bg-blue-500 rounded-full left-1/2 -translate-x-1/2 sm:top-1/4 top-1/8 z-20 blur-md mt-5"></div>
+                    <div class="sm:w-96 sm:h-96 w-64 h-64 absolute bg-blue-500 rounded-full left-1/2 -translate-x-1/2 sm:top-1/4 top-1/8 z-20 blur-md mt-5"></div>
                     <div class="animate-pulse sm:w-96 sm:h-96 w-64 h-64 absolute bg-blue-800 rounded-full left-1/2 -translate-x-1/2 sm:top-1/4 top-1/8 z-10 scale-150 blur-lg mt-5"></div>
-                    <div style="background-image: url('me.png');" class="bg-bottom bg-contain bg-no-repeat w-full h-full z-30 absolute "></div>
+                    <div style="background-image: url('me.png');" class="bg-bottom bg-contain bg-no-repeat w-full h-full z-30 absolute sm:bottom-10 bottom-0 "></div>
+                    <div class="absolute w-full max-w-md  bg-gradient-to-t from-blue-200 to-blue-100 sm:bottom-10 bottom-0 z-40 left-1/2 -translate-x-1/2 rounded-xl">
+                        <div class="text-center py-3 flex items-center justify-center px-3 space-x-5">
+                            <h3 class="uppercase text-3xl font-black text-blue-900 w-fit">ilham</h3>
+                            <div class="flex place-items-center w-fit space-x-2">
+                                <!-- INSTAGRAM -->
+                                <a href="" target="_blank" class="h-10 w-10 block transition-all bg-blue-800 rounded-full text-white p-1.5 hover:scale-105">
+                                    <svg class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="currentColor"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="currentColor"></path> </g></svg>
+                                </a>
+                                <!-- Linkedin -->
+                                <a href="" target="_blank" class="h-10 w-10 block transition-all bg-blue-800 rounded-full text-white p-1.5 hover:scale-105">
+                                    <svg class=""viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.5 8C7.32843 8 8 7.32843 8 6.5C8 5.67157 7.32843 5 6.5 5C5.67157 5 5 5.67157 5 6.5C5 7.32843 5.67157 8 6.5 8Z" fill="currentColor"></path> <path d="M5 10C5 9.44772 5.44772 9 6 9H7C7.55228 9 8 9.44771 8 10V18C8 18.5523 7.55228 19 7 19H6C5.44772 19 5 18.5523 5 18V10Z" fill="currentColor"></path> <path d="M11 19H12C12.5523 19 13 18.5523 13 18V13.5C13 12 16 11 16 13V18.0004C16 18.5527 16.4477 19 17 19H18C18.5523 19 19 18.5523 19 18V12C19 10 17.5 9 15.5 9C13.5 9 13 10.5 13 10.5V10C13 9.44771 12.5523 9 12 9H11C10.4477 9 10 9.44772 10 10V18C10 18.5523 10.4477 19 11 19Z" fill="currentColor"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M20 1C21.6569 1 23 2.34315 23 4V20C23 21.6569 21.6569 23 20 23H4C2.34315 23 1 21.6569 1 20V4C1 2.34315 2.34315 1 4 1H20ZM20 3C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3H20Z" fill="currentColor"></path> </g></svg>
+                                </a>
+                                <!-- Gmail -->
+                                <a href="" target="_blank" class="h-10 w-10 block transition-all bg-blue-800 rounded-full text-white p-1.5 hover:scale-105">
+                                    <svg class="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.85557 6.83962C5.62315 6.71446 5.34204 6.72072 5.11541 6.85608C4.88878 6.99145 4.75 7.23599 4.75 7.49997V17C4.75 17.4142 5.08579 17.75 5.5 17.75C5.91421 17.75 6.25 17.4142 6.25 17V8.75563L11.6444 11.6603C11.8664 11.7799 12.1336 11.7799 12.3556 11.6603L17.75 8.75563V17C17.75 17.4142 18.0858 17.75 18.5 17.75C18.9142 17.75 19.25 17.4142 19.25 17V7.49997C19.25 7.23599 19.1112 6.99145 18.8846 6.85608C18.658 6.72072 18.3769 6.71446 18.1444 6.83962L12 10.1482L5.85557 6.83962Z" fill="currentColor"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3106 3.7218C13.7773 3.40588 10.2228 3.40588 6.68943 3.7218L5.17208 3.85747C3.54447 4.003 2.2294 5.24642 1.99301 6.86334C1.49501 10.2697 1.49501 13.7303 1.99301 17.1366C2.2294 18.7535 3.54447 19.9969 5.17208 20.1425L6.68943 20.2781C10.2228 20.5941 13.7773 20.5941 17.3106 20.2781L18.8279 20.1425C20.4556 19.9969 21.7706 18.7535 22.007 17.1366C22.505 13.7303 22.505 10.2697 22.007 6.86334C21.7706 5.24642 20.4556 4.003 18.8279 3.85747L17.3106 3.7218ZM6.82301 5.21584C10.2675 4.90787 13.7325 4.90787 17.177 5.21584L18.6944 5.35151C19.6305 5.43521 20.3868 6.15036 20.5228 7.08033C20.9998 10.3427 20.9998 13.6572 20.5228 16.9196C20.3868 17.8496 19.6305 18.5647 18.6944 18.6484L17.177 18.7841C13.7325 19.0921 10.2675 19.0921 6.82301 18.7841L5.30567 18.6484C4.36955 18.5647 3.61319 17.8496 3.47723 16.9196C3.00027 13.6572 3.00027 10.3427 3.47723 7.08033C3.61319 6.15036 4.36955 5.43521 5.30567 5.35151L6.82301 5.21584Z" fill="currentColor"></path> </g></svg>
+                                </a>
+                                <!-- Github -->
+                                <a href="" target="_blank" class="h-10 w-10 block transition-all bg-blue-800 rounded-full text-white p-1.5 hover:scale-105">
+                                    <svg class="" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>github [currentColor]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="currentColor"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[currentColor]"> </path> </g> </g> </g> </g></svg>
+                                </a>
+                                <!-- Twitter -->
+                                <a href="" target="_blank" class="h-10 w-10 block transition-all bg-blue-800 rounded-full text-white p-1.5 hover:scale-105">
+                                    <svg class="" viewBox="0 0 960 960" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M282.554 305.916C335.787 349.961 402.104 368.638 470.519 367.04C475.413 367.339 477.111 365.342 478.409 360.947C498.784 272.058 603.253 221.122 670.968 295.529C683.653 291.734 715.113 267.664 725.3 274.356C729.495 277.651 730.594 282.745 726.499 285.941C716.312 295.629 710.319 307.814 704.626 320.398C716.212 318.201 728.696 311.509 740.481 314.006C768.646 333.182 696.237 347.964 700.931 386.715C698.234 514.555 637.011 634.306 506.674 669.561C432.666 690.935 349.171 701.621 276.561 669.661C244.501 650.485 282.354 642.096 299.633 637.502C321.106 629.911 341.68 619.424 360.157 606.341C332.691 584.468 235.013 547.314 313.615 521.047C286.249 502.97 181.98 419.274 265.975 413.382C256.087 380.623 250.294 347.664 242.404 314.505C239.008 284.543 267.872 289.936 282.554 305.916Z" fill="none"></path> <path d="M627.525 875.005C505.577 876.803 377.637 888.688 257.188 861.921C152.119 837.652 99.7847 752.958 91.7947 649.986C88.7984 509.662 74.6161 362.346 117.762 226.815C176.689 66.4157 317.912 86.7903 458.736 80.598C528.249 83.6941 599.26 73.3071 667.775 90.3858C749.972 102.87 826.576 161.497 851.345 242.196C864.629 275.255 864.629 311.709 867.425 346.566C871.22 429.562 872.918 512.558 870.921 595.554C861.533 763.045 812.594 871.609 627.525 875.005ZM470.521 367.04C402.107 368.638 335.79 349.961 282.556 305.916C267.875 289.936 239.011 284.543 242.406 314.606C250.197 347.764 256.089 380.723 265.977 413.482C181.982 419.375 286.252 502.97 313.617 521.147C235.016 547.415 332.694 584.568 360.159 606.441C341.682 619.624 321.108 630.011 299.635 637.602C282.356 642.096 244.504 650.486 276.564 669.762C349.173 701.722 432.569 691.035 506.676 669.662C636.913 634.306 698.237 514.456 700.933 386.715C696.239 347.964 768.549 333.282 740.484 314.006C728.699 311.509 716.214 318.201 704.629 320.398C710.322 307.914 716.314 295.729 726.501 285.941C730.596 282.745 729.597 277.652 725.303 274.356C715.215 267.664 683.655 291.734 670.971 295.529C603.155 221.122 498.786 272.059 478.411 360.948C477.113 365.342 475.415 367.34 470.521 367.04Z" fill="currentColor"></path> </g></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="w-full max-w-3xl flex flex-col justify-center sm:px-20 px-5 sm:space-y-8 space-y-6 ">
-                    <h3 class="font-semibold text-2xl capitalize text-blue-600">
-                        Backend Developer
+                    <h3 class="font-semibold text-2xl capitalize text-blue-600 w-fit px-4 py-1 relative">
+                    <div class="w-full h-full absolute bg-blue-50 left-0 top-0 -z-10 animate-pulse rounded"></div>
+                        <span class="animate-none">
+                            Backend Developer
+                        </span>
                     </h3>
                     <h2 class="text-white font-black text-5xl uppercase ">
                         <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-100 to-blue-300">
@@ -50,7 +111,7 @@
                         <div data-tooltip-target="tooltip-docker" data-tooltip-placement="bottom" class="h-16 w-16 bg-blue-200 rounded-full grid place-items-center border-2 border-white relative p-1.5 hover:scale-105 transition-all cursor-pointer">
                             <img src="logos/Docker.png" class="grayscale" alt="Docker.png">
                         </div>
-                        <div id="tooltip-docker" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-docker" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                             Docker
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -58,7 +119,7 @@
                         <div data-tooltip-target="tooltip-laravel" data-tooltip-placement="bottom" class="h-16 w-16 bg-blue-200 rounded-full grid place-items-center border-2 border-white relative p-2.5 hover:scale-105 transition-all cursor-pointer">
                             <img src="logos/Laravel.png" class="grayscale" alt="Laravel">
                         </div>
-                        <div id="tooltip-laravel" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-laravel" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                             Laravel
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -66,7 +127,7 @@
                         <div data-tooltip-target="tooltip-mysql" data-tooltip-placement="bottom" class="h-16 w-16 bg-blue-200 rounded-full grid place-items-center border-2 border-white relative p-1.5 hover:scale-105 transition-all cursor-pointer">
                             <img src="logos/Mysql.png" class="grayscale" alt="Mysql.png">
                         </div>
-                        <div id="tooltip-mysql" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-mysql" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                             My SQL
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -74,7 +135,7 @@
                         <div data-tooltip-target="tooltip-pgsql" data-tooltip-placement="bottom" class="h-16 w-16 bg-blue-200 rounded-full grid place-items-center border-2 border-white relative p-2.5 hover:scale-105 transition-all cursor-pointer">
                             <img src="logos/Postgresql.png" class="grayscale" alt="Postgresql.png">
                         </div>
-                        <div id="tooltip-pgsql" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-pgsql" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                             Postgre SQL
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -82,7 +143,7 @@
                         <div data-tooltip-target="tooltip-tailwind" data-tooltip-placement="bottom" class="h-16 w-16 bg-blue-200 rounded-full grid place-items-center border-2 border-white relative p-1.5 hover:scale-105 transition-all cursor-pointer">
                             <img src="logos/Tailwind.png" class="invert" alt="Tailwind.png">
                         </div>
-                        <div id="tooltip-tailwind" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-tailwind" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                             Tailwindcss
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -90,7 +151,7 @@
                         <div data-tooltip-target="tooltip-flowbite" data-tooltip-placement="bottom" class="h-16 w-16 bg-blue-200 rounded-full grid place-items-center border-2 border-white p-1.5 relative hover:scale-105 transition-all cursor-pointer">
                             <img src="logos/Flowbite.png" class="grayscale" alt="Flowbite.png">
                         </div>
-                        <div id="tooltip-flowbite" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-flowbite" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                             Flowbite
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -98,7 +159,7 @@
                         <div data-tooltip-target="tooltip-flutter" data-tooltip-placement="bottom" class="h-16 w-16 bg-blue-200 rounded-full grid place-items-center border-2 border-white pl-2 pt-2 pb-3 pr-5 relative hover:scale-105 transition-all cursor-pointer">
                             <img src="logos/Flutter.png" class="grayscale" alt="Flutter.png">
                         </div>
-                        <div id="tooltip-flutter" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-flutter" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip">
                             Flutter
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -117,8 +178,13 @@
 
 
     <section class="h-screen bg-gray-900 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/hero-pattern-dark.svg')] relative">
-        <div class="bg-gradient-to-b to-transparent via-violet-900/25 from-violet-900/75 w-full h-full absolute top-0 left-0 z-0 sm:px-20 px-2.5">
+        <div class="bg-gradient-to-t to-transparent via-violet-900/25 from-violet-900/75 w-full h-full absolute top-0 left-0 z-0 sm:px-20 px-2.5">
 
+            <h2 class="text-white font-black text-5xl uppercase pt-28 text-center">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-300 via-violet-100 to-violet-300">
+                    Education
+                </span>
+            </h2>
 
         </div>
     </section>
