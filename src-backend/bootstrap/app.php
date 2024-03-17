@@ -5,12 +5,18 @@ use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
 
 return Application::configure(basePath: dirname(__DIR__))
-    ->withRouting(
-        web: __DIR__.'/../routes/app.php',
-        commands: __DIR__.'/../routes/console.php',
-        health: '/up',
-        // authroute: __DIR__.'/../routes/authroute.php',
-    )
+->withRouting(
+    commands: __DIR__.'/../routes/console.php',
+    using: function () {
+        Route::middleware('api')
+            ->prefix('v1')
+            ->group(glob(base_path('routes/app/*.php'))
+        );
+ 
+        Route::middleware('web')
+            ->group(base_path('routes/app.php'));
+    },
+)
     ->withMiddleware(function (Middleware $middleware) {
         //
     })
