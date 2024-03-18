@@ -39,4 +39,27 @@ class AuthController extends Controller
             201
         );
     }
+
+    public function login(Request $request){
+        $emailCheck = User::where("email", $request->input('email'))->first();
+
+        if (!$emailCheck) {
+            return response()->json([
+                'message' => 'email not found'
+            ], 404);
+        }
+        if (Auth::attempt($request->only('email', 'password'))) {
+            $user = Auth::user();
+            $token = $user->createToken('AuthToken')->plainTextToken;
+
+            return response()->json([
+                'message' => 'Login successful',
+                'token' => $token
+            ]);
+        } else {
+            return response()->json([
+                'message' => 'invalid, wrong email or password'
+            ], 401);
+        }
+    }
 }
