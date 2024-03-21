@@ -10,6 +10,9 @@ use App\Models\User;
 class BasicInfo extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['user_id', 'full_name', 'position', 'description', 'photo'];
+    
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
