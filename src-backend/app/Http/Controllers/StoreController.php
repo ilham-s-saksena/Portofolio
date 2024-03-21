@@ -42,7 +42,7 @@ class StoreController extends Controller
 
         $basicInfo->save();
 
-        return response()->json(['message' => 'Basic info saved successfully'], 200);
+        return response()->json(['message' => 'Basic info saved successfully'], 201);
     }
 
     public function social_media(Request $request){
@@ -65,7 +65,7 @@ class StoreController extends Controller
 
         $basicInfo->save();
 
-        return response()->json(['message' => 'Media Social Successfully Stored'], 200);
+        return response()->json(['message' => 'Media Social Successfully Stored'], 201);
     }
 
 
@@ -101,7 +101,7 @@ class StoreController extends Controller
 
         $basicInfo->save();
 
-        return response()->json(['message' => 'Education saved successfully'], 200);
+        return response()->json(['message' => 'Education saved successfully'], 201);
     }
 
     public function organization(Request $request){
@@ -134,7 +134,7 @@ class StoreController extends Controller
 
         $basicInfo->save();
 
-        return response()->json(['message' => 'Organization saved successfully'], 200);
+        return response()->json(['message' => 'Organization saved successfully'], 201);
     }
 
     public function skill(Request $request){
@@ -165,7 +165,7 @@ class StoreController extends Controller
 
         $basicInfo->save();
 
-        return response()->json(['message' => 'Skill saved successfully'], 200);
+        return response()->json(['message' => 'Skill saved successfully'], 201);
     }
 
     public function experience(Request $request){
