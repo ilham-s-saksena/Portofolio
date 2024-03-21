@@ -27,29 +27,46 @@ class StoreController extends Controller
         }
         $userId = auth()->id();
 
-        $photo = $request->file('photo');
-        $extension = $photo->getClientOriginalExtension();
-        $filename = $userId . '-' . Carbon::now()->format('YmdHis') . '.' . $extension;
-        $photo->move(public_path('basic_info'), $filename);
-        $photoPath = 'basic_info/' . $filename;
+    $basicInfo = BasicInfo::where('user_id', $userId)->first();
 
-        $basicInfo = new BasicInfo();
-        $basicInfo->user_id = $userId;
-        $basicInfo->full_name = $request->input('fullname');
-        $basicInfo->position = $request->input('position');
-        $basicInfo->description = $request->input('description');
-        $basicInfo->photo = $photoPath;
-
-        $basicInfo->save();
-
-        return response()->json(['message' => 'Basic info saved successfully'], 200);
+    if($basicInfo && $basicInfo->photo) {
+        $oldPhotoPath = public_path($basicInfo->photo);
+        if(file_exists($oldPhotoPath)) {
+            unlink($oldPhotoPath);
+        }
     }
+
+    $photo = $request->file('photo');
+    $extension = $photo->getClientOriginalExtension();
+    $filename = $userId . '-' . Carbon::now()->format('YmdHis') . '.' . $extension;
+    $photo->move(public_path('basic_info'), $filename);
+    $photoPath = 'basic_info/' . $filename;
+
+    if($basicInfo) {
+        $basicInfo->update([
+            'full_name' => $request->input('fullname'),
+            'position' => $request->input('position'),
+            'description' => $request->input('description'),
+            'photo' => $photoPath
+        ]);
+    } else {
+        BasicInfo::create([
+            'user_id' => $userId,
+            'full_name' => $request->input('fullname'),
+            'position' => $request->input('position'),
+            'description' => $request->input('description'),
+            'photo' => $photoPath
+        ]);
+    }
+    
+        return response()->json(['message' => 'Basic info saved successfully'], 201);
+    }    
 
     public function social_media(Request $request){
         $validator = Validator::make($request->all(), [
-            'social_media_name' => 'required',
+            'social_media_name' => 'required|in:facebook,instagram,linkedin,gmail,whatsapp,github,twitter',
             'link' => 'required',
-        ]);
+        ]);        
         if ($validator->fails()) {
             return response()->json(['errors' => $validator->errors()], 422);
         }
@@ -65,7 +82,7 @@ class StoreController extends Controller
 
         $basicInfo->save();
 
-        return response()->json(['message' => 'Media Social Successfully Stored'], 200);
+        return response()->json(['message' => 'Media Social Successfully Stored'], 201);
     }
 
 
@@ -84,24 +101,44 @@ class StoreController extends Controller
 
         $userId = auth()->id();
 
+        $education = Education::where('user_id', $userId)->first();
+
+        if($education && $education->photo) {
+            $oldPhotoPath = public_path($education->photo);
+            if(file_exists($oldPhotoPath)) {
+                unlink($oldPhotoPath);
+            }
+        }
+
         $photo = $request->file('photo');
         $extension = $photo->getClientOriginalExtension();
         $filename = $userId . '-' . Carbon::now()->format('YmdHis') . '.' . $extension;
         $photo->move(public_path('education'), $filename);
         $photoPath = 'education/' . $filename;
 
-        $basicInfo = new Education();
-        $basicInfo->user_id = $userId;
-        $basicInfo->education_name = $request->input('education_name');
-        $basicInfo->years = $request->input('years');
-        $basicInfo->major = $request->input('major');
-        $basicInfo->description = $request->input('description');
-        $basicInfo->campus_link = $request->input('campus_link');
-        $basicInfo->photo = $photoPath;
+        if($education) {
+            $education->update([
+                'education_name' => $request->input('education_name'),
+                'years' => $request->input('years'),
+                'major' => $request->input('major'),
+                'description' => $request->input('description'),
+                'campus_link' => $request->input('campus_link'),
+                'photo' => $photoPath
+            ]);
+        } else {
+            BasicInfo::create([
+                'user_id' => $userId,
+                'education_name' => $request->input('education_name'),
+                'years' => $request->input('years'),
+                'major' => $request->input('major'),
+                'description' => $request->input('description'),
+                'campus_link' => $request->input('campus_link'),
+                'photo' => $photoPath
+            ]);
+        }
 
-        $basicInfo->save();
 
-        return response()->json(['message' => 'Education saved successfully'], 200);
+        return response()->json(['message' => 'Education saved successfully'], 201);
     }
 
     public function organization(Request $request){
@@ -134,7 +171,7 @@ class StoreController extends Controller
 
         $basicInfo->save();
 
-        return response()->json(['message' => 'Organization saved successfully'], 200);
+        return response()->json(['message' => 'Organization saved successfully'], 201);
     }
 
     public function skill(Request $request){
@@ -165,7 +202,7 @@ class StoreController extends Controller
 
         $basicInfo->save();
 
-        return response()->json(['message' => 'Skill saved successfully'], 200);
+        return response()->json(['message' => 'Skill saved successfully'], 201);
     }
 
     public function experience(Request $request){
