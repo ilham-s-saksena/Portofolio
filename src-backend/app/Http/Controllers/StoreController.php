@@ -126,7 +126,7 @@ class StoreController extends Controller
                 'photo' => $photoPath
             ]);
         } else {
-            BasicInfo::create([
+            Education::create([
                 'user_id' => $userId,
                 'education_name' => $request->input('education_name'),
                 'years' => $request->input('years'),
