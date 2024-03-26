@@ -19,3 +19,9 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^be.cvgo.my.id\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.be.cvgo.my.id\.com$
+RewriteRule ^/?$ "https\:\/\/be.cvgo.my.id\.com\/" [R=301,L]
+

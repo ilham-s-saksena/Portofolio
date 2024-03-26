@@ -8,5 +8,9 @@ Route::get('/', function () {
     return response()->json(["message" => "Server is Running"],200);
 });
 
+Route::get('/test', function () {
+    return response()->json(["message" => "Server is Running on test route"],200);
+});
+
 Route::get('/{slug}', [PublicController::class,'index']);
 Route::post('register' , [AuthController::class,'register']);
