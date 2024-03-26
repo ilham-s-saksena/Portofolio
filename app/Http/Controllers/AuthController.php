@@ -62,4 +62,14 @@ class AuthController extends Controller
             ], 401);
         }
     }
+
+    public function self_info(Request $request){
+        $user = $request->user();
+    
+        return response()->json([
+            'id' => $user->id,
+            'name' => $user->name,
+            'email' => $user->email,
+        ], 200);
+    }
 }
